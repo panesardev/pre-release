@@ -12,24 +12,6 @@
           "style": "scss",
           "skipTests": true
         },
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
         "@schematics/angular:service": {
           "skipTests": true
         }
@@ -52,13 +34,18 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/public"
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/index.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
